@@ -12,7 +12,7 @@ class RingBuffer:
         else:
             self.buffer[self.i] = item
             if self.i == self.capacity - 1:
-                self.i = (self.i + 1) % self.capacity  # remaining value set as index
+                self.i = (self.i + 1) % self.capacity  # overides the oldest element in list
             else:
                 self.i += 1  # increment by 1
 
